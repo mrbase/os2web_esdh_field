@@ -36,10 +36,10 @@ tools:
     php_cpd:
         enabled: true
         names:
-            - *.php
-            - *.module
-            - *.inc
-            - *.install
-            - *.test
-            - *.profile
-            - *.theme
+            - '*.php'
+            - '*.module'
+            - '*.inc'
+            - '*.install'
+            - '*.test'
+            - '*.profile'
+            - '*.theme'
