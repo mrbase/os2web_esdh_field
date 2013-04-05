@@ -1,42 +1,10 @@
 before_commands:
-    - "git clone --branch 7.x-2.x http://git.drupal.org/project/coder.git /tmp/coder"
+    - git clone --branch 7.x-2.x http://git.drupal.org/project/coder.git /tmp/coder
+
 tools:
-    php_mess_detector:
-        enabled: true
-        extensions:
-            - php
-            - module
-            - inc
-            - install
-            - test
-            - profile
-            - theme
-        command: phpmd
-        filter:
-            paths: []
-            excluded_paths: []
-        config:
-            rulesets:
-                - codesize
-        path_configs: []
-
-    php_analyzer:
-        enabled: true
-        filter:
-            excluded_paths:
-                - "*/Tests/*"
-            paths: []
-        extensions:
-            - php
-            - module
-            - inc
-            - install
-            - test
-            - profile
-            - theme
-        path_configs: []
-
     php_code_sniffer:
+        config:
+            standard: /tmp/coder/coder_sniffer/Drupal
         extensions:
             - php
             - module
@@ -45,40 +13,6 @@ tools:
             - test
             - profile
             - theme
-
-        enabled: true
         filter:
             excluded_paths:
-                - "tmp/*"
-            paths: []
-        config:
-            standard: "/tmp/coder/coder_sniffer/Drupal"
-            sniffs: []
-            config: []
-        command: phpcs
-        path_configs: []
-
-    php_cpd:
-        command: phpcpd
-        min_lines: 5
-        min_tokens: 70
-        excluded_dirs: []
-        names:
-            - *.php
-            - *.module
-            - *.inc
-            - *.install
-            - *.test
-            - *.profile
-            - *.theme
-        enabled: true
-        filter:
-            paths: []
-            excluded_paths: []
-
-filter:
-    paths: []
-    excluded_paths: []
-}
-after_commands: []
-artifacts: []
+              - tmp/*
