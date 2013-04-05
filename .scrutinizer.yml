@@ -29,10 +29,6 @@ tools:
             - profile
             - theme
 
-    php_code_coverage:
-        enabled: true
-        only_changesets: true
-
     php_cpd:
         enabled: true
         names:
