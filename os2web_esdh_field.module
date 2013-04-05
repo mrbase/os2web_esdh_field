@@ -13,19 +13,15 @@ define('ACADRE_CM_ACCESS_OPEN_DOCUMENT', '3');
 /**
  * Implements hook_field_info().
  */
-function os2web_esdh_field_field_info() 
-{
-  return array
-  (
-    'os2web_esdh_field_case_ident' => array
-    (
+function os2web_esdh_field_field_info() {
+  return array(
+    'os2web_esdh_field_case_ident' => array(
       'label' => t('ESDH Case'),
       'description' => t('Sags-id skal være på formen år/nummer eller år-nummer. Kun én værdi er tilladte.'),
       'default_widget' => 'os2web_esdh_field_case_ident_wid',
       'default_formatter' => 'os2web_esdh_field_case_ident_for',
     ),
-    'os2web_esdh_field_doc_ident' => array
-    (
+    'os2web_esdh_field_doc_ident' => array(
       'label' => t('ESDH Document'),
       'description' => t('Dokument-id skal være på formen nummer/år eller nummer-år. Flere dokumenter skal være adskildt af , (komma).'),
       'default_widget' => 'os2web_esdh_field_doc_ident_wid',
