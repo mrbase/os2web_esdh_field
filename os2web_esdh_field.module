@@ -13,7 +13,8 @@ define('ACADRE_CM_ACCESS_OPEN_DOCUMENT', '3');
 /**
  * Implements hook_field_info().
  */
-function os2web_esdh_field_field_info() {
+function os2web_esdh_field_field_info() 
+{
   return array(
     'os2web_esdh_field_case_ident' => array(
       'label' => t('ESDH Case'),
