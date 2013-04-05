@@ -3,6 +3,7 @@ before_commands:
 
 tools:
     php_code_sniffer:
+        enabled: true
         config:
             standard: /tmp/coder/coder_sniffer/Drupal
         extensions:
@@ -16,3 +17,29 @@ tools:
         filter:
             excluded_paths:
               - tmp/*
+
+    php_mess_detector:
+        enabled: true
+        extensions:
+            - php
+            - module
+            - inc
+            - install
+            - test
+            - profile
+            - theme
+
+    php_code_coverage:
+        enabled: true
+        only_changesets: true
+
+    php_cpd:
+        enabled: true
+        names:
+            - *.php
+            - *.module
+            - *.inc
+            - *.install
+            - *.test
+            - *.profile
+            - *.theme
